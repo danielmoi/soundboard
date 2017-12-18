@@ -51,7 +51,41 @@
                     <view key="view" contentMode="scaleToFill" id="G67-qX-ZZl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuM-o4-bIr">
+                                <rect key="frame" x="163" y="114" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5g-5Q-bkP">
+                                <rect key="frame" x="172.5" y="194" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-7K-KFo">
+                                <rect key="frame" x="164.5" y="354" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-ar-LeN">
+                                <rect key="frame" x="112.5" y="274" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="t96-sW-fRU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wsb-ar-LeN" firstAttribute="top" secondItem="j5g-5Q-bkP" secondAttribute="bottom" constant="50" id="10g-ID-EgE"/>
+                            <constraint firstItem="j5g-5Q-bkP" firstAttribute="top" secondItem="MuM-o4-bIr" secondAttribute="bottom" constant="50" id="BU9-Ba-3Zv"/>
+                            <constraint firstItem="j5g-5Q-bkP" firstAttribute="centerX" secondItem="G67-qX-ZZl" secondAttribute="centerX" id="O8O-EM-mCM"/>
+                            <constraint firstItem="MuM-o4-bIr" firstAttribute="centerX" secondItem="G67-qX-ZZl" secondAttribute="centerX" id="OxH-9b-0ZF"/>
+                            <constraint firstItem="YIw-7K-KFo" firstAttribute="top" secondItem="Wsb-ar-LeN" secondAttribute="bottom" constant="50" id="eH6-H6-toz"/>
+                            <constraint firstItem="YIw-7K-KFo" firstAttribute="centerX" secondItem="G67-qX-ZZl" secondAttribute="centerX" id="gE8-m1-diV"/>
+                            <constraint firstItem="YIw-7K-KFo" firstAttribute="centerX" secondItem="G67-qX-ZZl" secondAttribute="centerX" id="gdZ-SD-VxW"/>
+                            <constraint firstItem="Wsb-ar-LeN" firstAttribute="centerX" secondItem="G67-qX-ZZl" secondAttribute="centerX" id="j1D-S7-gJs"/>
+                            <constraint firstItem="MuM-o4-bIr" firstAttribute="top" secondItem="fqg-6b-wpQ" secondAttribute="top" constant="50" id="sPr-UO-uGN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fqg-6b-wpQ"/>
                     </view>
                 </viewController>
