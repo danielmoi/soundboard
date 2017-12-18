@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Sound View Controller-->
         <scene sceneID="pDJ-CN-qLt">
             <objects>
-                <viewController id="C6n-ZB-1Ab" sceneMemberID="viewController">
+                <viewController id="C6n-ZB-1Ab" customClass="SoundViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G67-qX-ZZl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,12 +59,18 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5g-5Q-bkP">
                                 <rect key="frame" x="172.5" y="194" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="C6n-ZB-1Ab" eventType="touchUpInside" id="ji7-LO-vYG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-7K-KFo">
-                                <rect key="frame" x="164.5" y="354" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="170.5" y="354" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="C6n-ZB-1Ab" eventType="touchUpInside" id="cNK-rW-uMU"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-ar-LeN">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-ar-LeN">
                                 <rect key="frame" x="112.5" y="274" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="t96-sW-fRU"/>
@@ -88,6 +94,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fqg-6b-wpQ"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Wsb-ar-LeN" id="vbh-vt-Wxe"/>
+                        <outlet property="recordButton" destination="MuM-o4-bIr" id="ugh-m2-gZ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSk-tV-E2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
