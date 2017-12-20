@@ -67,8 +67,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-7K-KFo">
-                                <rect key="frame" x="170.5" y="354" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <rect key="frame" x="172.5" y="354" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="saveTapped:" destination="C6n-ZB-1Ab" eventType="touchUpInside" id="cNK-rW-uMU"/>
                                 </connections>
