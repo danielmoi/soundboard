@@ -55,6 +55,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuM-o4-bIr">
                                 <rect key="frame" x="163" y="114" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="C6n-ZB-1Ab" eventType="touchUpInside" id="7an-lU-bSp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5g-5Q-bkP">
                                 <rect key="frame" x="172.5" y="194" width="30" height="30"/>
