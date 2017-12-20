@@ -18,6 +18,10 @@ class SoundViewController: UIViewController {
     
     var audioRecorder: AVAudioRecorder? = nil
     
+    var audioURL: URL?
+    
+    var audioPlayer: AVAudioPlayer? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +41,7 @@ class SoundViewController: UIViewController {
             // 2. create URL for the audio file
             let basePath: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
             let pathComponents = [basePath, "audio.m4a"]
-            let audioURL = NSURL.fileURL(withPathComponents: pathComponents)
+            audioURL = NSURL.fileURL(withPathComponents: pathComponents)
             
             print("###########")
             print(audioURL)
@@ -80,6 +84,13 @@ class SoundViewController: UIViewController {
     
     
     @IBAction func playTapped(_ sender: Any) {
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: audioURL!)
+            audioPlayer!.play()
+        } catch let error {
+            print(error)
+        }
+        
     }
     
     @IBAction func saveTapped(_ sender: Any) {
