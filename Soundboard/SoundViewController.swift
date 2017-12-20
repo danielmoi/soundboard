@@ -16,6 +16,11 @@ class SoundViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var playButton: UIButton!
+    
+    @IBOutlet weak var addButton: UIButton!
+    
+    
     var audioRecorder: AVAudioRecorder? = nil
     
     var audioURL: URL?
@@ -26,6 +31,8 @@ class SoundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRecorder()
+        
+        playButton.isEnabled = false
     }
     
     func setupRecorder() {
@@ -72,13 +79,14 @@ class SoundViewController: UIViewController {
             
             // Change button title to "Record"
             recordButton.setTitle("Record", for: .normal)
+            playButton.isEnabled = true
         } else {
             // Start the recording
             audioRecorder?.record()
             
             // Change button title to "Stop"
             recordButton.setTitle("Stop", for: .normal)
-            
+            playButton.isEnabled = false
         }
     }
     
